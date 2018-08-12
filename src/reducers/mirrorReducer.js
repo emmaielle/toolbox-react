@@ -1,6 +1,6 @@
 import { FETCH_MIRROR_TEXT_FAILURE, FETCH_MIRROR_TEXT_REQUEST, FETCH_MIRROR_TEXT_SUCCESS } from '../actions/types';
 
-export default function (state = null, action){
+export default function (state = { loading: false, error: false }, action){
     switch (action.type) {
         case FETCH_MIRROR_TEXT_REQUEST:
             return {

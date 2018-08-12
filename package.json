@@ -23,6 +23,7 @@
     "sass-loader": "^7.1.0"
   },
   "jest": {
+    "setupFiles": ["<rootDir>/node_modules/regenerator-runtime/runtime"],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -30,7 +31,9 @@
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/setup/"
     ],
-    "transform": { ".*": "<rootDir>/node_modules/jest-css-modules"}
+    "transform": {
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    }
   },
   "scripts": {
     "start-js": "react-scripts start",

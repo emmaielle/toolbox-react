@@ -1,5 +1,6 @@
 import * as actions from '../../src/actions';
 import configureStore from 'redux-mock-store';
+import * as types from '../../src/actions/types'
 
 const mockStore = configureStore();
 const store = mockStore();
@@ -14,7 +15,7 @@ describe('mirror actions', () => {
         const expectedActions = [
             {
               'payload': 'holaaa?!SSDFSD sdfsdf',
-              'type': 'FETCH_MIRROR_TEXT',
+              'type': types.FETCH_MIRROR_TEXT,
             },
           ];
       
@@ -28,7 +29,7 @@ describe('mirror actions', () => {
         const expectedActions = [
             {
               'payload': {text: "dfgdfgdfg dgdfgd?"},
-              'type': 'FETCH_MIRROR_TEXT_SUCCESS',
+              'type': types.FETCH_MIRROR_TEXT_SUCCESS,
             },
           ];
         store.dispatch(actions.fetchMirrorSuccess({text: "dfgdfgdfg dgdfgd?"}));
@@ -40,7 +41,7 @@ describe('mirror actions', () => {
         test('Dispatches the correct action and payload for fetchMirror request', () => {
           const expectedActions = [
               {
-                'type': 'FETCH_MIRROR_TEXT_REQUEST',
+                'type': types.FETCH_MIRROR_TEXT_REQUEST,
               },
             ];
           store.dispatch(actions.fetchMirrorRequest());
@@ -52,7 +53,7 @@ describe('mirror actions', () => {
         test('Dispatches the correct action and payload for fetchMirror failure', () => {
           const expectedActions = [
               {
-                'type': 'FETCH_MIRROR_TEXT_FAILURE',
+                'type': types.FETCH_MIRROR_TEXT_FAILURE,
               },
             ];
           store.dispatch(actions.fetchMirrorFailure());
