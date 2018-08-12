@@ -1,0 +1,42 @@
+.home {
+    background-color: #bce9ff;
+    height: 100vh;
+
+    .texts {
+        padding-top: 10px;
+        text-align: center;
+
+        &.title {
+            font-size: 3em;
+        }
+    }
+
+    .mirror {
+        padding-top: 25px;
+        text-align: center;
+        
+        .text-area {
+            resize: none;
+            width: 234px;
+            height: 149px;
+            border-radius: 8px;
+            border: transparent;
+            padding: 10px;
+            box-shadow: rgb(144, 144, 144) 3px 3px 15px 0px;
+            margin: 0px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .result-box {
+            background-color: white;
+                
+            .text { 
+                font-family: 'Kirang Haerang', cursive;
+            }
+        }
+
+    }
+}

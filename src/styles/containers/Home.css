@@ -1,0 +1,26 @@
+.home {
+  background-color: #bce9ff;
+  height: 100vh; }
+  .home .texts {
+    padding-top: 10px;
+    text-align: center; }
+    .home .texts.title {
+      font-size: 3em; }
+  .home .mirror {
+    padding-top: 25px;
+    text-align: center; }
+    .home .mirror .text-area {
+      resize: none;
+      width: 234px;
+      height: 149px;
+      border-radius: 8px;
+      border: transparent;
+      padding: 10px;
+      box-shadow: #909090 3px 3px 15px 0px;
+      margin: 0px; }
+      .home .mirror .text-area:focus {
+        outline: none; }
+    .home .mirror .result-box {
+      background-color: white; }
+      .home .mirror .result-box .text {
+        font-family: 'Kirang Haerang', cursive; }
