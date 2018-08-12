@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mirror component should render the Mirror component 1`] = `
+<div
+  className="mirror"
+>
+  <div>
+    <textarea
+      className="text-area"
+      onChange={[Function]}
+      placeholder="Enter a text"
+      value=""
+    />
+  </div>
+  <div
+    className="result-container"
+  >
+    <div
+      className="success-box"
+    />
+  </div>
+</div>
+`;

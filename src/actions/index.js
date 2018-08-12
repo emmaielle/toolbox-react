@@ -1,8 +1,9 @@
 import * as types from './types';
 
-export function fetchMirror(){
+export function fetchMirror(text){
     return {
-        type: types.FETCH_MIRROR_TEXT_REQUEST
+        type: types.FETCH_MIRROR_TEXT,
+        payload: text
     }
 }
 

@@ -4,7 +4,7 @@ export default function (state = null, action){
     switch (action.type) {
         case FETCH_MIRROR_TEXT_REQUEST:
             return {
-                ...state, loading: true, error: false, mirror: undefined
+                ...state, loading: true, error: false
             }
         case FETCH_MIRROR_TEXT_SUCCESS:
             return  {

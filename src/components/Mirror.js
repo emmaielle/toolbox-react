@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import autoBind from 'auto-bind';
 import Loader from 'react-loaders'
+import { Col } from 'react-bootstrap';
 import _ from 'lodash';
 
 export class Mirror extends Component {
@@ -11,30 +12,39 @@ export class Mirror extends Component {
             text: ''
         };
         autoBind(this);
-        this.change = _.debounce(this.props.changeInput, 1000);
+        this.change = this.props.changeInput;
     }
 
     handleChangeInput(ev){
         const text = ev.target.value;
         this.setState({text}, () => {
-            this.change(text);
-        });
+            if (text){
+                this.change(text);
+            }
+        })
+        
+        
     }
 
     render() {
         debugger;
         const { mirrored } = this.props;
-        let renderBody = undefined;
+        let renderBody = (
+            <div className="success-box">
+            </div>
+            );
         if (mirrored){
             const { loading, error, mirror } = mirrored;
-            if (loading) {
-                renderBody = <Loader type="line-scale" />;
-            }
-            else if (error){
+            if (error){
                 renderBody = <p>There has been an unexpected error</p>;
             }
             else if (mirror){
-                renderBody = <p className="text">{mirror}</p>;
+                renderBody = (
+                    <Col xs={12} sm={10} smOffset={1} md={8} mdOffset={2} lg={8} lgOffset={2} className="success-box">
+                        <div className="text title">Result:</div>                        
+                        <div className="text">{mirror.text}</div>
+                    </Col>
+                );
             }
         }
 
@@ -46,7 +56,7 @@ export class Mirror extends Component {
                 value={this.state.text} 
                 onChange={this.handleChangeInput} />
             </div>
-            <div className="result-box">
+            <div className="result-container">
                 {renderBody}
             </div>
         </div>

@@ -4,7 +4,7 @@ import { fetchMirror } from '../actions';
 import { withRouter } from 'react-router-dom';
 import { Mirror } from './Mirror';
 import { Col } from 'react-bootstrap';
-import '../styles/containers/Home.css';
+import "../styles/containers/Home.css";
 
 export class Home extends Component {
     constructor(props){
@@ -25,7 +25,7 @@ export class Home extends Component {
         <Col xs={12} sm={8} md={8} mdOffset={2} smOffset={2} className="home">
             <div className="texts title">Mirror fetcher</div>
             <div className="texts description">
-                Enter any word to get a surprise! 
+                Enter any text to get the identical text you wrote! 
             </div>
             <Mirror changeInput={this.handleChangeInput} mirrored={mirrorReducer}/>
         </Col>

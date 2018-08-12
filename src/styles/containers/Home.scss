@@ -1,6 +1,9 @@
+$primary-color: white;
+@import './node_modules/loaders.css/src/animations/line-scale.scss';
+
 .home {
     background-color: #bce9ff;
-    height: 100vh;
+    min-height: 100vh;
 
     .texts {
         padding-top: 10px;
@@ -30,13 +33,30 @@
             }
         }
 
-        .result-box {
-            background-color: white;
-                
-            .text { 
-                font-family: 'Kirang Haerang', cursive;
+        .result-container {
+            font-size: 1.5em;
+
+            .success-box {
+                padding: 20px;
+
+                .text {
+                    text-align: justify;
+                    
+                    &.title {
+                        font-weight: bold;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
 
     }
+
+    .loader-hidden {
+        display: none;
+    }
+    .loader-active {
+        display: block;
+    }
+
 }

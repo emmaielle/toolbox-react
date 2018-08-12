@@ -6,7 +6,8 @@ class Backend {
     }
 
     getMirror(text){
-        console.log("need to fetch mirror from ", text);
+        const encoded = encodeURIComponent(text);
+        return fetch(`${this.URL}/mirror/${encoded}`);
     }
 }
 
