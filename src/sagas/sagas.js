@@ -13,7 +13,6 @@ class Saga {
         yield put(actions.fetchMirrorRequest());
         const result = yield this.backend.getMirror(action.payload);
         const resultBody = yield result.json();
-        debugger;
         if (resultBody){
             yield put(actions.fetchMirrorSuccess(resultBody));
         } 

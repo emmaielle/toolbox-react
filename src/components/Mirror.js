@@ -27,7 +27,6 @@ export class Mirror extends Component {
     }
 
     render() {
-        debugger;
         const { mirrored } = this.props;
         let renderBody = (
             <div className="success-box">

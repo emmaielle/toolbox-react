@@ -13,7 +13,6 @@ export class Home extends Component {
     }
     
     handleChangeInput(input) {
-        debugger;
         this.props.dispatch(fetchMirror(input));
     }
 
