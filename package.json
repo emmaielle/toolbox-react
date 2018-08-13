@@ -23,7 +23,9 @@
     "sass-loader": "^7.1.0"
   },
   "jest": {
-    "setupFiles": ["<rootDir>/node_modules/regenerator-runtime/runtime"],
+    "setupFiles": [
+      "<rootDir>/node_modules/regenerator-runtime/runtime"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
